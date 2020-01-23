@@ -1,0 +1,30 @@
+{
+  "name": "linkglish-backend",
+  "version": "0.1.0",
+  "description": "Linkglish backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JPabloMF/english-backend.git"
+  },
+  "keywords": [
+    "english",
+    "platform",
+    "learn",
+    "study"
+  ],
+  "author": "Juan Pablo MF",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JPabloMF/english-backend/issues"
+  },
+  "homepage": "https://github.com/JPabloMF/english-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.6"
+  }
+}
