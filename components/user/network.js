@@ -7,8 +7,8 @@ router.post('/', function(req, res) {
   const { email, password } = req.body;
   controller
     .addUser(email, password)
-    .then((data) => {
-      response.success(req, res, 201, data);
+    .then(() => {
+      response.success(req, res, 201, 'User was registered');
     })
     .catch((error) => {
       response.error(req, res, 500, error);
