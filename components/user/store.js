@@ -17,7 +17,6 @@ async function addUser(email, password) {
 async function getUser(email, password) {
   const user = await Model.findOne({ email, password });
   return new Promise((resolve, reject) => {
-    console.log(user)
     if (user) {
       resolve({ access: true });
     } else {
