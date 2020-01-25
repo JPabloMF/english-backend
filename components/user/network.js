@@ -16,6 +16,15 @@ router.post('/', function(req, res) {
 });
 
 router.get('/', function(req, res) {
+  const { email, password } = req.body;
+  controller
+    .getUser(email, password)
+    .then(() => {
+      response.success(req, res, 201, { access: true });
+    })
+    .catch((error) => {
+      response.error(req, res, 500, error);
+    });
 });
 
 module.exports = router;
