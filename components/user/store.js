@@ -2,9 +2,16 @@ const Model = require('./model');
 
 console.log('[db] Successfully connected');
 
-function addUser(email, password) {
-  const user = new Model({ email, password });
-  return user.save();
+async function addUser(email, password) {
+  const userSchema = new Model({ email, password });
+  const user = Model.findOne({ email });
+  return new Promise((resolve,reject)=> {
+    if(user){
+      reject('User already exist.');
+    }else{
+      resolve(userSchema.save());
+    }
+  })
 }
 
 function getUser(email, password) {
